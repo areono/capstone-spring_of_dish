@@ -1,0 +1,100 @@
+/* 페이지 컨테이너 */
+.pageContainer {
+  position: relative;
+  width: 100%;
+  max-width: 430px;
+  height: 100vh;
+  margin: 0 auto;
+  box-sizing: border-box;
+  overflow: hidden;
+}
+
+/* 메인 영역 (헤더 아래, 바텀 네비 위) */
+.main {
+  position: absolute;
+  top: 1px;     /* Header 높이에 맞춰 조정 */
+  bottom: 60px;  /* BottomNav 높이에 맞춰 조정 */
+  left: 0;
+  right: 0;
+  display: flex;
+  flex-direction: column;
+  padding: 0.5rem 0.01rem;
+  background-color: #f9f9f9;
+  box-sizing: border-box;
+}
+
+/* 로딩 중 / 비어있음 placeholder */
+.placeholder {
+  margin: auto;
+  text-align: center;
+  color: #666;
+}
+
+/* 기존 “북마크 없음” placeholder 스타일 */
+.imageWrapper {
+  text-align: center;
+  margin-top: 2rem;
+}
+
+.mainImage {
+  width: 120px;
+  height: 120px;
+  object-fit: cover;
+}
+
+.title {
+  text-align: center;
+  font-size: 1.2rem;
+  margin: 1.5rem 0 0.5rem;
+  color: #AFD77E;
+}
+
+.description {
+  text-align: center;
+  line-height: 1.4;
+  color: #666;
+  font-size: 0.9rem;
+}
+
+/* 북마크 리스트 영역 */
+.listContainer {
+  flex: 1;
+  overflow-y: auto;
+  padding-right: 0.001rem;
+  padding-bottom: 3.5rem;
+}
+
+/* 카드 (button 요소) */
+.card {
+  all: unset;                /* 기본 버튼 스타일 제거 */
+  display: flex;
+  align-items: center;
+  width: 100%;
+  padding: 0.75rem 0;
+  cursor: pointer;
+  border-bottom: 1px solid #ddd;  /* 구분선 */
+}
+
+.card:last-child {
+  border-bottom: none;       /* 마지막 아이템은 구분선 제거 */
+}
+
+.thumbnail {
+  flex-shrink: 0;
+  width: 90px;
+  height: 90px;
+  object-fit: cover;
+  border-radius: 8px;
+  margin: 0 0.75rem 0 0.5rem;
+}
+
+.info {
+  flex: 1;
+  padding-left: 0.25rem;
+}
+
+.cardTitle {
+  font-size: 1rem;
+  font-weight: bold;
+  color: #333;
+}

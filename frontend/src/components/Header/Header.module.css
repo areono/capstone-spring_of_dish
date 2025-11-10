@@ -1,0 +1,57 @@
+/* Header.module.css */
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: center; /* 중앙 정렬 (기본적으로 제목 중앙 배치) */
+  height: 56px;            /* 헤더 높이 예시 */
+  background-color: #8cc63f; /* 연두색 배경 */
+  position: relative;      /* 절대 위치 버튼 배치를 위해 */
+}
+
+/* 중앙 타이틀 */
+.centerTitle {
+  font-size: 30px;
+  color: #fff;
+  font-weight: bold;
+}
+
+/* 왼쪽 버튼 */
+.leftButton {
+  position: absolute;
+  left: 16px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 18px; /* 혹은 아이콘 이미지 사용 가능 */
+  color: #fff;
+}
+
+/* 오른쪽 버튼 */
+.rightButton {
+  position: absolute;
+  right: 16px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 18px; /* 취소 버튼인 경우 텍스트, 아이콘인 경우 이미지 */
+  color: #fff;
+}
+
+.rightButton img {
+  width: 24px;
+  height: 24px;
+  object-fit: contain;
+}
+
+/* 오른쪽 빈 영역: 헤더 중앙 정렬 유지용 */
+.rightPlaceholder {
+  position: absolute;
+  right: 16px;
+  width: 24px; /* 뒤로가기 버튼과 균형 맞추기 위해 동일한 너비 지정 */
+}
+
+.backIcon {
+  width: 24px;
+  height: 24px;
+  object-fit: contain;
+}

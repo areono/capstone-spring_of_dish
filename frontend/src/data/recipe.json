@@ -1,0 +1,124 @@
+
+
+[
+  {
+    "title": "계란볶음밥",
+    "subtitle": "국민 간편식 계란볶음밥!",
+    "youtubeLink": "https://www.youtube.com/watch?v=kR77WlHRZrs",
+    "steps": [
+      "달군 팬에 식용유를 둘러줍니다. 이때 파를 넣어 파기름을 내줘도 좋아요.",
+      "계란 2개를 넣고 저으며 익혀줍니다.",
+      "계란이 어느 정도 익혀지면 밥을 넣고, 간장 1.5큰술, 참기름 1큰술을 넣고 비벼줍니다.",
+      "취향에 따라 통깨를 넣어주면 완성!"
+    ],
+    "ingredients": [
+      { "name": "계란", "iconUrl": "/icons/egg.png" },
+      { "name": "쌀", "iconUrl": "/icons/rice.png" },
+      { "name": "오징어젓", "iconUrl": "/assets/icons/salt_fish/squid.png" }
+    ],
+    "seasonings": [
+      { "name": "간장", "iconUrl": "/icons/soy-sauce.png" },
+      { "name": "참기름", "iconUrl": "/icons/sesame-oil.png" }
+    ]
+  },
+  {
+    "title": "계란밥",
+    "subtitle": "국민 간편식 계란밥!",
+    "youtubeLink": "https://www.youtube.com/watch?v=kR77WlHRZrs",
+    "steps": [
+      "달군 팬에 식용유를 둘러줍니다. 이때 파를 넣어 파기름을 내줘도 좋아요.",
+      "계란 2개를 넣고 저으며 익혀줍니다.",
+      "계란이 어느 정도 익혀지면 밥을 넣고, 간장 1.5큰술, 참기름 1큰술을 넣고 비벼줍니다.",
+      "취향에 따라 통깨를 넣어주면 완성!"
+    ],
+    "ingredients": [
+      { "name": "계란", "iconUrl": "/icons/egg.png" },
+      { "name": "쌀", "iconUrl": "/icons/rice.png" },
+      { "name": "오징어젓", "iconUrl": "/assets/icons/salt_fish/squid.png" }
+    ],
+    "seasonings": [
+      { "name": "간장", "iconUrl": "/icons/soy-sauce.png" },
+      { "name": "참기름", "iconUrl": "/icons/sesame-oil.png" }
+    ]
+  },
+  {
+    "title": "볶음밥",
+    "subtitle": "국민 간편식 볶음밥!",
+    "youtubeLink": "https://www.youtube.com/watch?v=kR77WlHRZrs",
+    "steps": [
+      "달군 팬에 식용유를 둘러줍니다. 이때 파를 넣어 파기름을 내줘도 좋아요.",
+      "계란 2개를 넣고 저으며 익혀줍니다.",
+      "계란이 어느 정도 익혀지면 밥을 넣고, 간장 1.5큰술, 참기름 1큰술을 넣고 비벼줍니다.",
+      "취향에 따라 통깨를 넣어주면 완성!"
+    ],
+    "ingredients": [
+      { "name": "계란", "iconUrl": "/icons/egg.png" },
+      { "name": "쌀", "iconUrl": "/icons/rice.png" },
+      { "name": "오징어젓", "iconUrl": "/assets/icons/salt_fish/squid.png" }
+    ],
+    "seasonings": [
+      { "name": "간장", "iconUrl": "/icons/soy-sauce.png" },
+      { "name": "참기름", "iconUrl": "/icons/sesame-oil.png" }
+    ]
+  },
+  {
+    "title": "계란볶음",
+    "subtitle": "국민 간편식 계란볶음!",
+    "youtubeLink": "https://www.youtube.com/watch?v=kR77WlHRZrs",
+    "steps": [
+      "달군 팬에 식용유를 둘러줍니다. 이때 파를 넣어 파기름을 내줘도 좋아요.",
+      "계란 2개를 넣고 저으며 익혀줍니다.",
+      "계란이 어느 정도 익혀지면 밥을 넣고, 간장 1.5큰술, 참기름 1큰술을 넣고 비벼줍니다.",
+      "취향에 따라 통깨를 넣어주면 완성!"
+    ],
+    "ingredients": [
+      { "name": "계란", "iconUrl": "/icons/egg.png" },
+      { "name": "쌀", "iconUrl": "/icons/rice.png" },
+      { "name": "오징어젓", "iconUrl": "/assets/icons/salt_fish/squid.png" }
+    ],
+    "seasonings": [
+      { "name": "간장", "iconUrl": "/icons/soy-sauce.png" },
+      { "name": "참기름", "iconUrl": "/icons/sesame-oil.png" }
+    ]
+  },
+  {
+    "title": "계란",
+    "subtitle": "국민 간편식 계란!",
+    "youtubeLink": "https://www.youtube.com/watch?v=kR77WlHRZrs",
+    "steps": [
+      "달군 팬에 식용유를 둘러줍니다. 이때 파를 넣어 파기름을 내줘도 좋아요.",
+      "계란 2개를 넣고 저으며 익혀줍니다.",
+      "계란이 어느 정도 익혀지면 밥을 넣고, 간장 1.5큰술, 참기름 1큰술을 넣고 비벼줍니다.",
+      "취향에 따라 통깨를 넣어주면 완성!"
+    ],
+    "ingredients": [
+      { "name": "계란", "iconUrl": "/icons/egg.png" },
+      { "name": "쌀", "iconUrl": "/icons/rice.png" },
+      { "name": "오징어젓", "iconUrl": "/assets/icons/salt_fish/squid.png" }
+    ],
+    "seasonings": [
+      { "name": "간장", "iconUrl": "/icons/soy-sauce.png" },
+      { "name": "참기름", "iconUrl": "/icons/sesame-oil.png" }
+    ]
+  },
+  {
+    "title": "볶음",
+    "subtitle": "국민 간편식 볶음!",
+    "youtubeLink": "https://www.youtube.com/watch?v=kR77WlHRZrs",
+    "steps": [
+      "달군 팬에 식용유를 둘러줍니다. 이때 파를 넣어 파기름을 내줘도 좋아요.",
+      "계란 2개를 넣고 저으며 익혀줍니다.",
+      "계란이 어느 정도 익혀지면 밥을 넣고, 간장 1.5큰술, 참기름 1큰술을 넣고 비벼줍니다.",
+      "취향에 따라 통깨를 넣어주면 완성!"
+    ],
+    "ingredients": [
+      { "name": "계란", "iconUrl": "/icons/egg.png" },
+      { "name": "쌀", "iconUrl": "/icons/rice.png" },
+      { "name": "오징어젓", "iconUrl": "/assets/icons/salt_fish/squid.png" }
+    ],
+    "seasonings": [
+      { "name": "간장", "iconUrl": "/icons/soy-sauce.png" },
+      { "name": "참기름", "iconUrl": "/icons/sesame-oil.png" }
+    ]
+  }
+]

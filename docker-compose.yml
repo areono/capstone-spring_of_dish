@@ -1,0 +1,90 @@
+version: '3.9'
+
+services:
+  frontend:
+    build:
+      context: ./frontend
+      dockerfile: Dockerfile
+    container_name: spring-front
+    restart: always
+    # ports:
+    #   - "3000:3000"
+    volumes:
+       - ./frontend:/app 
+       - /app/node_modules
+    # env_file:
+    #   - ./frontend/.env
+    networks:
+      - spring-network
+      
+  spring-nginx:
+    image: nginx:latest
+    container_name: spring-nginx
+    restart: always
+    ports:
+      - "80:80"
+      - "443:443"
+    volumes:
+      - ./frontend/etc/nginx/conf.d/:/etc/nginx/conf.d/
+      - /etc/letsencrypt:/etc/letsencrypt
+    depends_on:
+      - backend
+      - frontend
+    networks:
+      - spring-network
+#------------------------------------------------------
+#데이터베이스
+  mariadb:
+    image: mariadb:11
+    container_name: spring-db
+    restart: always
+    # ports:
+    #   - "3307:3306"  # 로컬 호스트 3307 → 컨테이너 3306 포트 매핑
+    environment:
+      MYSQL_ROOT_PASSWORD: rootpassword
+      MYSQL_USER: dish
+      MYSQL_PASSWORD: spring
+      MYSQL_DATABASE: spring_of_dish
+    volumes:
+      - spring_data:/var/lib/mysql
+
+    command: --max-connections=1000
+    networks:
+      - spring-network
+    healthcheck:
+      test: ['CMD-SHELL', 'mysqladmin ping -h areonoo.store -u dish -pspring']
+      interval: 10s
+      timeout: 5s
+      retries: 5
+      start_period: 30s
+#------------------------------------------------------
+#백엔드
+  backend:
+    container_name: spring-backend
+    build:
+      context: ./backend
+      dockerfile: Dockerfile
+    restart: always
+    # ports:
+    #   - "8000:8000"
+    depends_on:
+      - mariadb
+    env_file:
+      - ./backend/.env 
+    environment:
+      - CONTAINER_TIMEZONE=Asia/Seoul
+      - MYSQL_HOST=mariadb
+      - MYSQL_ROOT_PASSWORD=rootpassword
+      - MYSQL_USER=dish
+      - MYSQL_PASSWORD=spring
+      - MYSQL_DATABASE=spring_of_dish
+    volumes:
+      - ./backend:/app
+    networks:
+      - spring-network
+
+volumes:
+  spring_data:
+
+networks:
+  spring-network:

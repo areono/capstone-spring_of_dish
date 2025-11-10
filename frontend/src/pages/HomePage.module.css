@@ -1,0 +1,185 @@
+.main {
+  position: absolute;
+  top: 56px;
+  bottom: 60px;
+  left: 0;
+  right: 0;
+  display: flex; /* Flexbox 활성화 */
+  flex-direction: column; /* 세로로 쌓기 */
+  align-items: center; /* 수평 중앙 정렬 */
+  justify-content: flex-start; /* 수직 상단 정렬 */
+  padding: 1rem;
+  /* background-color: #f9f9f9; */
+}
+
+.imageWrapper {
+  text-align: center;
+  margin-top: 2rem;
+}
+
+/*프로필 보여지는거 볼드체 수정 05/22 민정*/
+.profileInfo {
+  font-size: 1.2rem;
+  font-weight: bold;
+  margin-bottom: 1rem;
+}
+
+.mainImage {
+  width: 120px;
+  height: 120px;
+  object-fit: cover;
+}
+
+/*타이틀이랑 냉장고가 비었어요 볼드체 수정 05/22 민정*/
+.title {
+  text-align: center;
+  font-size: 1.4rem;
+  font-weight: bold;
+  margin-top: 1.5rem;
+  margin-bottom: 0.5rem;
+  color: #afd77e;
+}
+
+.description {
+  text-align: center;
+  line-height: 1.5;
+  color: #666;
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+.scrollBox {
+  max-height: 200px; /* 원하는 높이 제한 */
+  overflow-y: auto;
+  padding-right: 8px;
+}
+
+/* 스크롤바 커스터마이징 (선택 사항, Chrome/Edge/Webkit만 가능) */
+.scrollBox::-webkit-scrollbar {
+  width: 6px;
+}
+
+.scrollBox::-webkit-scrollbar-thumb {
+  background-color: #ccc;
+  border-radius: 3px;
+}
+
+.scrollBox::-webkit-scrollbar-track {
+  background-color: transparent;
+}
+/*알림받기 5/29*/
+
+.notifyButtonNew {
+  margin-top: 1.2rem;
+  background-color: #8cc63f;
+  color: #fff;
+  border: none;
+  border-radius: 24px;
+  padding: 12px 24px;
+  font-size: 1rem;
+  cursor: pointer;
+
+  /* 강제 다크모드 반전 무시 */
+  filter: none !important;
+  -webkit-filter: none !important;
+  color-adjust: exact !important;
+  -webkit-print-color-adjust: exact !important;
+
+  width: 240px;
+  text-align: center;
+  display: inline-block;
+}
+
+/* 다크모드에서도 색상·반전 무시 */
+@media (prefers-color-scheme: dark) {
+  .notifyButtonNew {
+    background-color: #8cc63f !important;
+    color: #fff !important;
+    filter: none !important;
+    -webkit-filter: none !important;
+    color-adjust: exact !important;
+    -webkit-print-color-adjust: exact !important;
+  }
+}
+
+@media (prefers-color-scheme: dark) {
+  .notifyButton {
+    /* 텍스트나 아이콘이 어두운 배경에서 잘 보이도록 */
+    color: #fff !important;
+    background-color: #8cc63f !important;
+    /* 혹은 SVG 반전 방지용 클래스가 있다면 */
+    filter: invert(0) !important;
+  }
+}
+
+.noInvert {
+  /* 필터 반전·재조정 무시 */
+  filter: none !important;
+  -webkit-filter: none !important;
+  /* 크롬 강제 색상 조정(다크모드) 무시 */
+  color-adjust: exact !important;
+  -webkit-print-color-adjust: exact !important;
+}
+
+.notifyButton {
+  margin-top: 0.3rem;
+  background-color: #8cc63f;
+  color: #fff;
+  border: none;
+  border-radius: 24px;
+  padding: 12px 24px;
+  font-size: 1rem;
+  cursor: pointer;
+
+  /* 강제 다크모드 반전 무시 */
+  filter: none !important;
+  -webkit-filter: none !important;
+  color-adjust: exact !important;
+  -webkit-print-color-adjust: exact !important;
+
+  width: 240px;
+  text-align: center;
+  display: inline-block;
+}
+
+.notifyButton:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+.notifyButtonNew:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  padding: 0 1rem;
+  margin-bottom: 1rem;
+}
+
+.background {
+  background-image: url("/assets/spring_of_dish.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: top center;
+  min-height: 100vh;
+  width: 100%;
+}
+.welcome {
+  font-size: 1.8rem;
+  font-weight: bold;
+  text-align: center;
+  margin: 1.5rem 0 1.5rem;
+  color: #8cc63f;
+}
+
+.notificationListWrapper {
+  display: flex;
+  justify-content: center;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
+

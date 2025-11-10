@@ -1,0 +1,388 @@
+/* 페이지 전체 컨테이너 */
+.pageContainer {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  height: 100vh; /* 화면 전체 높이 확보 */
+  padding: 20px 0 0; /* 상단 헤더 분리 */
+  background-color: #fff;
+}
+
+.expireDate {
+  font-weight: bold;
+  font-size: 0.85rem;
+  color: #000;
+}
+
+/*05/22 민정네 냉장고 폰트 수정 */
+.profileInfo {
+  font-size: 1.4rem;
+  margin: 0;
+  color: #8cc63f;
+  font-weight: bold;
+  text-align: left;
+}
+
+/* 페이지 제목 */
+.pageTitle {
+  font-size: 24px;
+  font-weight: bold;
+  margin: 0 16px 16px;
+}
+
+
+/* 선택모드일때 표시되는 n개수 텍스트 */
+.selectedCount {
+  position: absolute;
+  top: 20px;
+  right: 100px;
+  font-size: 14px;
+  color: #333;
+}
+
+/*——— 스크롤 적용 부분 ———*/
+.categoryWrapper {
+  flex: 1;  
+  overflow-y: auto; 
+  padding: 0 16px 260px; 
+}
+
+/* 카테고리 제목 */
+.categoryTitle {
+  font-size: 18px;
+  font-weight: 600;
+  color: #8cc63f;
+  margin: 16px 0 8px 16px; /* 왼쪽으로 16px 들여쓰기 */
+}
+
+/* 재료 그리드 */
+.ingredientsList {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 24px;
+}
+
+/* 개별 아이템 */
+.ingredientItem {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 8px;
+  cursor: pointer;
+  margin-bottom: 4px;
+  position: relative;
+  text-align: center;
+}
+
+.selectedItem {
+  border: 2px solid #8cc63f;
+  background: #f0f9f0;
+}
+
+.ingredientIcon {
+  width: 40px;
+  height: 40px;
+  object-fit: contain;
+}
+
+.ingredientName {
+  font-weight: bold;
+  margin-top: 4px;
+  font-size: 17px;
+}
+
+/* 모달 백드롭 */
+.modalBackdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+}
+
+/* 모달 콘텐츠 */
+.modalContent {
+  background: white;
+  padding: 24px 20px;
+  border-radius: 12px;
+  width: 320px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.modalImage {
+  width: 80px;
+  height: 80px;
+  object-fit: contain;
+  margin-bottom: 10px;
+}
+
+.modalTitle {
+  font-size: 24px;
+  font-weight: bold;
+  margin: 8px 0 4px;
+}
+
+.modalSubtitle {
+  font-size: 14px;
+  color: #7d7d7d;
+  margin-bottom: 20px;
+}
+
+.dateSection {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-bottom: 20px;
+}
+
+.dateItem {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 14px;
+}
+
+.dateItem input {
+  width: 140px;
+  padding: 4px;
+  font-size: 14px;
+}
+
+.buttonSection {
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  margin-bottom: 20px;
+}
+
+.freezeButton,
+.deleteButton {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 20px;
+  background: #f5f5f5;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.modalButtons {
+  display: flex;
+  justify-content: space-around;
+  width: 100%;
+}
+
+.modalButtons button {
+  width: 100px;
+  padding: 10px;
+  font-size: 16px;
+  border: none;
+  background: #f5f5f5;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+.startButton {
+  position: fixed;
+  bottom: 90px; /* 네비게이션 바 높이만큼 띄움 */
+  left: 50%;
+  transform: translateX(-50%);
+  width: calc(100% - 32px);
+  max-width: 250px;
+  padding: 12px 0;
+  background-color: #8cc63f;
+  color: #fff;
+  border: none;
+  border-radius: 24px;
+  font-size: 17px;
+  cursor: pointer;
+  z-index: 10;
+}
+
+/* 모바일 반응형 스타일 */
+@media screen and (max-width: 768px) {
+  .pageTitle {
+    font-size: 20px;
+    margin: 0 12px 12px;
+  }
+
+  .selectButton {
+    padding: 5px 10px;
+    font-size: 13px;
+  }
+
+  .selectedCount {
+    font-size: 13px;
+    right: 90px;
+  }
+
+  .ingredientsList {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 12px;
+  }
+
+  .ingredientName {
+    font-size: 15px;
+  }
+
+  .modalContent {
+    width: 90%;
+    max-width: 320px;
+    padding: 20px 16px;
+  }
+
+  .modalTitle {
+    font-size: 20px;
+  }
+
+  .modalSubtitle {
+    font-size: 13px;
+  }
+
+  .dateItem {
+    font-size: 13px;
+  }
+
+  .dateItem input {
+    width: 120px;
+  }
+
+  .freezeButton,
+  .deleteButton {
+    padding: 8px 16px;
+    font-size: 14px;
+  }
+
+  .startButton {
+    bottom: 90px;
+    font-size: 18px;
+    padding: 10px 0;
+  }
+}
+
+/* 작은 모바일 화면 */
+@media screen and (max-width: 360px) {
+  .ingredientsList {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 8px;
+  }
+
+  .ingredientIcon {
+    width: 35px;
+    height: 35px;
+  }
+
+  .ingredientName {
+    font-size: 13px;
+  }
+
+  .modalContent {
+    padding: 16px 12px;
+  }
+
+  .modalButtons button {
+    width: 80px;
+    padding: 7px;
+    font-size: 13px;
+  }
+}
+
+/* 날짜 입력창 기본 너비 */
+.dateItem input {
+  width: 140px;
+  padding: 4px;
+  font-size: 14px;
+}
+
+.modalContent input[type="date"] {
+  background-color: #fff !important;
+  color: #000 !important;
+  border: 1px solid #ccc !important;
+  border-radius: 4px !important;
+  filter: none !important;
+  -webkit-filter: none !important;
+  color-adjust: exact !important;
+  -webkit-print-color-adjust: exact !important;
+}
+
+/* ─── 모달 내 버튼 가시성 확보 ─── */
+.modalContent .freezeButton,
+.modalContent .deleteButton,
+.modalContent .modalButtons button {
+  background-color: #f5f5f5 !important;
+  color: #333 !important;
+  filter: none !important;
+  -webkit-filter: none !important;
+  color-adjust: exact !important;
+  -webkit-print-color-adjust: exact !important;
+}
+
+/*다크 모드 @media 블록*/
+@media (prefers-color-scheme: dark) {
+  .modalContent input[type="date"] {
+    background-color: #fff !important;
+    color: #000 !important;
+    border: 1px solid #ccc !important;
+    filter: none !important;
+    -webkit-filter: none !important;
+    color-adjust: exact !important;
+    -webkit-print-color-adjust: exact !important;
+  }
+
+  .modalContent .freezeButton,
+  .modalContent .deleteButton,
+  .modalContent .modalButtons button {
+    background-color: #f5f5f5 !important;
+    color: #333 !important;
+    filter: none !important;
+    -webkit-filter: none !important;
+  }
+}
+input[type="date"]::-webkit-calendar-picker-indicator {
+  /* 색 반전 + 대비 높이기 */
+  filter: invert(1) brightness(1.5);
+}
+
+/* Edge/IE용 기본 클리어 버튼 감추기 (선택 사항) */
+input[type="date"]::-ms-clear {
+  display: none;
+}
+
+.ingredientItem:hover {
+  background-color: #f8f8f8;
+}
+
+/* 냉동 보관 배지 */
+.frozenLabel {
+  position: absolute;
+  top: 6px;
+  right: 6px;
+  display: inline-block;
+  padding: 2px 6px;
+  font-size: 0.7rem;
+  color: #fff;
+  background-color: #64c8ff;
+  border-radius: 4px;
+  white-space: nowrap;
+}
+
+/* 냉동 보관 카드 강조 */
+.frozenItem {
+  border: 2px solid #64c8ff;
+  background-color: #e6f7ff;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(100, 200, 255, 0.4);
+  padding: 12px;
+  transition: transform 0.2s;
+}
+.frozenItem:hover {
+  transform: translateY(-2px);
+}

@@ -1,0 +1,69 @@
+
+
+.page {
+
+  /* 위/좌/우: 20px, 아래: 0px */
+  padding: 20px 20px 0 20px;
+  font-family: sans-serif;
+}
+
+.title {
+  font-size: 1.8rem;
+  font-weight: bold;
+  margin-bottom: 16px;
+  text-align: center;
+}
+
+.recipeList {
+  max-height: calc(100vh - 60px - 40px); /* ← 실제 네비게이션 높이에 맞춰서 숫자 조정 */
+  overflow-y: auto;
+  padding-right: 8px; /* 스크롤바 여유 공간 */
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 16px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 16px;
+  max-height: 70vh; /* 또는 필요 시 height: calc(100vh - 헤더 높이 등) */
+  overflow-y: auto;
+  padding-right: 8px; /* 스크롤바 여유 공간 */
+}
+
+.recipeCard { 
+  background-color: #fff;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  padding: 16px;
+  text-align: center;
+}
+
+.recipeCard img {
+  width: 100%;
+  height: 140px;
+  object-fit: cover;
+  border-radius: 8px;
+  margin-bottom: 8px;
+}
+
+.recipeCard h3 {
+  margin: 8px 0 4px;
+  font-size: 1.2rem;
+}
+
+.recipeCard p {
+  font-size: 0.9rem;
+  color: #555;
+}
+
+.backButton {
+  margin-top: 24px;
+  display: block;
+  width: 100%;
+  padding: 12px;
+  font-size: 1rem;
+  background-color: #9AD77D;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+}

@@ -1,0 +1,88 @@
+/* 전체 화면, 수직 중앙 정렬 */
+.container {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 0 16px;
+  background-color: #fff;
+  box-sizing: border-box;
+}
+
+/* 타이틀: 이미지 속 연두색 손글씨 */
+.title {
+  font-family: "Segoe Script", cursive;
+  font-size: 32px;
+  color: #8cc63f;
+  margin-bottom: 24px;
+  line-height: 1;
+}
+
+/* 부제: 중앙 정렬, 두 줄 */
+.subtitle {
+  font-size: 16px;
+  color: #333;
+  text-align: center;
+  line-height: 1.5;
+  margin-bottom: 40px;
+}
+
+/* 카카오 로그인 버튼 */
+.kakaoButton {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  width: 100%;
+  max-width: 360px;
+  height: 44px;
+  background-color: #fee500;
+  color: #3c1e1e;
+  border: none;
+  border-radius: 8px;
+  font-size: 16px;
+  cursor: pointer;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* 버튼 내 아이콘 */
+.icon {
+  font-size: 20px;
+  margin-right: 8px;
+  line-height: 1;
+  width: 16px;
+}
+
+/* 버튼 텍스트 */
+.buttonText {
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+/* 반응형 */
+@media (max-width: 480px) {
+  .title {
+    font-size: 24px;
+    margin-bottom: 16px;
+  }
+
+  .subtitle {
+    font-size: 14px;
+    margin-bottom: 24px;
+  }
+
+  .kakaoButton {
+    height: 40px;
+    font-size: 14px;
+    border-radius: 6px;
+  }
+
+  .icon {
+    width: 14px;
+    height: 14px;
+    margin-right: 6px;
+  }
+}
