@@ -89,7 +89,7 @@ class Ingredient(Base):
     category = Column(VARCHAR(50))  # 카테고리 (예: "채소", "육류", "조미료")
     added_date = Column(DateTime, default=datetime.datetime.now)
     limit_date = Column(DateTime, nullable=False)
-    is_frozen = Column(Boolean, default=False)
+    #is_frozen = Column(Boolean, default=False)
     kakao_id = Column(BigInteger, ForeignKey("users.kakao_id"))
     image_name = Column(VARCHAR(255), ForeignKey("images.name"), nullable=True)
 

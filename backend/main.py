@@ -13,7 +13,7 @@ from fastapi.middleware.cors import CORSMiddleware
 from fastapi.staticfiles import StaticFiles
 from fastapi.security import HTTPBearer, HTTPAuthorizationCredentials
 from jose import jwt, JWTError
-from openai import OpenAI
+from openai import AsyncOpenAI
 from openai.types.chat import (
     ChatCompletionSystemMessageParam,
     ChatCompletionUserMessageParam,
@@ -325,7 +325,7 @@ kauth_host = "https://kauth.kakao.com"
 kapi_host = "https://kapi.kakao.com"
 openai_host = "https://api.openai.com/v1"
 message_template = '{"object_type":"text","text":"Hello, world!","link":{"web_url":"https://developers.kakao.com","mobile_web_url":"https://developers.kakao.com"}}'
-client = OpenAI(api_key=os.getenv("OPENAI_API_KEY"))
+client = AsyncOpenAI(api_key=os.getenv("OPENAI_API_KEY"))
 YOUTUBE_API_KEY = os.getenv("YOUTUBE_API_KEY")
 
 
@@ -1064,7 +1064,7 @@ async def generate_recipe_with_gpt(video_url: str) -> dict:
         }
         messages: List[ChatCompletionMessageParam] = [system_message, user_message]
 
-        response = client.chat.completions.create(
+        response = await client.chat.completions.create(
             model="gpt-4.1",
             messages=messages,
             temperature=0.3,
